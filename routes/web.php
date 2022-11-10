@@ -40,3 +40,5 @@ Route::put('personas/update', [PersonaController::class, 'update'])->name('perso
 Route::get('personas/{id}/show', [PersonaController::class, 'show'])->name('personas.show');
 Route::get('personas/{id}/destroy', [PersonaController::class, 'destroy'])->name('personas.destroy');
 
+Route::get('personas/graficos', [PersonaController::class, 'graficos'])->name('personas.graficos');
+

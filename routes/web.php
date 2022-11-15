@@ -32,13 +32,13 @@ Route::get('/', function () {
 // index, create, store, edit, update, destroy, show
 // Route::resource('personas', PersonaController::class);
 // Route::get('personas/exportarpdf', [PersonaController::class, 'exportar_pdf'])->name('personas.exportar_pdf');
-Route::get('personas/index', [PersonaController::class, 'index'])->name('personas.index');
-Route::get('personas/create', [PersonaController::class, 'create'])->name('personas.create');
-Route::post('personas/store', [PersonaController::class, 'store'])->name('personas.store');
-Route::get('personas/{id}/edit', [PersonaController::class, 'edit'])->name('personas.edit');
-Route::put('personas/update', [PersonaController::class, 'update'])->name('personas.update');
-Route::get('personas/{id}/show', [PersonaController::class, 'show'])->name('personas.show');
-Route::get('personas/{id}/destroy', [PersonaController::class, 'destroy'])->name('personas.destroy');
+Route::get('backend/v1/person/list/all', [PersonaController::class, 'index'])->name('persona.index');
+Route::get('persona/create', [PersonaController::class, 'create'])->name('persona.create');
+Route::post('persona/store', [PersonaController::class, 'store'])->name('persona.store');
+Route::get('persona/{id}/edit', [PersonaController::class, 'edit'])->name('persona.edit');
+Route::put('persona/update', [PersonaController::class, 'update'])->name('persona.update');
+Route::get('persona/{id}/show', [PersonaController::class, 'show'])->name('persona.show');
+Route::get('persona/{id}/destroy', [PersonaController::class, 'destroy'])->name('persona.destroy');
 
-Route::get('personas/graficos', [PersonaController::class, 'graficos'])->name('personas.graficos');
+Route::get('persona/graficos', [PersonaController::class, 'graficos'])->name('persona.graficos');
 

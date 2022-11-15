@@ -10,9 +10,9 @@ class PersonaController extends Controller
     public function index(){
         // $personas = Persona::all();
         // $personas = Persona::where('estado', 1)->where('apellido', 'like', 'd%')->get();
-        $personas = Persona::where('estado',1)->paginate(10);
-        dd($personas);
-        //return view('admin/persona/index')->with('personas', $personas);
+        $personas = Persona::paginate(10);
+        // dd($personas);
+        return view('admin/persona/index')->with('personas', $personas);
     }
 
     public function create(){

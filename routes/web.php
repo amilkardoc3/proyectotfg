@@ -32,7 +32,7 @@ Route::get('/', function () {
 // index, create, store, edit, update, destroy, show
 // Route::resource('personas', PersonaController::class);
 // Route::get('personas/exportarpdf', [PersonaController::class, 'exportar_pdf'])->name('personas.exportar_pdf');
-Route::get('backend/v1/person/list/all', [PersonaController::class, 'index'])->name('persona.index');
+Route::get('persona', [PersonaController::class, 'index'])->name('persona.index');
 Route::get('persona/create', [PersonaController::class, 'create'])->name('persona.create');
 Route::post('persona/store', [PersonaController::class, 'store'])->name('persona.store');
 Route::get('persona/{id}/edit', [PersonaController::class, 'edit'])->name('persona.edit');
